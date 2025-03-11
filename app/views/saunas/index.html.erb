@@ -1,0 +1,10 @@
+<div class="contents row">
+  <% @saunas.each do |sauna| %>
+    <div class="content_post" style="background-image: url(<%= sauna.image %>);">
+      <p><%= sauna.text %></p>
+      <span class="name">
+        <%= sauna.name %>
+      </span>
+    </div>
+  <% end %>
+</div>
