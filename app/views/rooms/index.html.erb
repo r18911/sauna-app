@@ -12,6 +12,14 @@
 
   <% @rooms.each do |room| %>
     <div class="room-card">
+      <!-- 🔹 管理者用の編集・削除ボタン -->
+        <% if user_signed_in? && current_user.admin? %>
+          <div class="admin-buttons">
+            <%= link_to "編集", edit_room_path(room), class: "btn-admin btn-edit" %>
+            <%= link_to "削除", room_path(room), method: :delete, data: { confirm: "本当に削除しますか？", turbo_method: :delete }, class: "btn-admin btn-delete" %>
+          </div>
+        <% end %>
+
       <!-- 部屋の画像 -->
       <div class="room-images">
         <%= image_tag room.images.first, alt: room.name, class: "room-img" %>

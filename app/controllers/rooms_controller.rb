@@ -1,5 +1,6 @@
 class RoomsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show] # ログインなしでも一覧・詳細は閲覧可
+  before_action :check_admin, only: [:new, :create, :edit, :update, :destroy]
   load_and_authorize_resource # CanCanCan で権限管理
 
   def index
@@ -33,7 +34,13 @@ class RoomsController < ApplicationController
   def update
     @room = Room.find(params[:id])
     authorize! :update, @room # 管理者だけが更新できる
-    if @room.update(room_params)
+  
+    # 画像が選択されている場合のみ更新
+    if room_params[:images].present?
+      @room.images.attach(room_params[:images]) # 追加された画像をアタッチ
+    end
+  
+    if @room.update(room_params.except(:images)) # 画像以外のデータを更新
       redirect_to rooms_path, notice: "部屋情報が更新されました"
     else
       render :edit
@@ -52,4 +59,12 @@ class RoomsController < ApplicationController
   def room_params
     params.require(:room).permit(:name, :size, :bed_type, :facilities, :capacity, :price, images: [])
   end
+
+  def check_admin
+    unless current_user.admin?
+      flash[:alert] = "アクセス権限がありません。"
+      redirect_to root_path
+    end
+  end
+
 end
