@@ -2,66 +2,94 @@
 
 /* === 部屋リスト全体のスタイル === */
 .rooms-container {
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 20px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 50px 20px;
   text-align: center;
+  background-color: #ece7e1;
 }
 
 .rooms-container h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 42px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 30px;
   text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
 }
 
 /* === 各部屋のカード === */
 .room-card {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background: #fff;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  max-width: 900px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+.room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* === 画像のデザイン === */
 .room-card img {
-  width: 200px;
-  height: 150px;
+  width: 250px;
+  height: 170px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 10px;
+  border: 3px solid #ddd;
 }
 
+/* === 部屋情報のデザイン === */
 .room-info {
-  margin-left: 20px;
+  flex: 1;
+  padding-left: 20px;
   text-align: left;
 }
 
 .room-info h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.room-price {
-  font-size: 18px;
+  font-size: 28px;
   font-weight: bold;
-  color: #d32f2f;
-  margin: 10px 0;
+  color: #444;
+  font-family: 'Playfair Display', serif;
 }
 
-/* === 予約ボタン === */
+.room-info p {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+/* === 料金表示 === */
+.room-price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #c9a74a;
+  margin-top: 10px;
+}
+
+/* === 予約ボタンのデザイン === */
 .btn-reserve {
   display: inline-block;
   padding: 12px 25px;
-  background: #FF9800;
+  background: #c9a74a;
   color: white;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 25px;
   text-decoration: none;
-  transition: 0.3s;
+  font-size: 18px;
+  transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
 .btn-reserve:hover {
-  background: #E68900;
+  background: #b8953f;
+  transform: scale(1.05);
 }
