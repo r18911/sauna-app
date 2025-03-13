@@ -2,6 +2,8 @@
 
 /* Bootstrapの読み込み */
 @import "bootstrap";
+@import "rooms";
+@import "auth";
 
 /* === 全体リセット === */
 * {
@@ -120,10 +122,6 @@ a:hover {
 .section2 {
   background-image: url('/assets/662a8d74-dec4-464b-b4de-49ac963cb839.jpg');
 }
-
-// .section3 {
-//   background-image: url('/assets/662a8d74-dec4-464b-b4de-49ac963cb839.jpg');
-// }
 
 /* === フッター === */
 footer {

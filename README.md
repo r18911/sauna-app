@@ -16,14 +16,16 @@
 - has_many :saunas, through: :reservations
 
 
-## saunas テーブル（サウナ情報）
+## rooms テーブル（サウナ情報）
 | Column       | Type   | Options                        |
 |--------------|--------|--------------------------------|
 | name         | string | null: false                    |
 | description  | text   | null: false                    |
-| price        | integer| null: false                    |
-| location     | string | null: false                    |
+| size         | integer| null: false                    |
+| bed_type     | string | null: false                    |
+| facilities   | text   | null: false                    |
 | capacity     | integer| null: false, default: 1        |
+| price        | integer| null: false                    |
 
 ### Association
 - has_many :reservations

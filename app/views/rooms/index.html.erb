@@ -1,0 +1,33 @@
+<div class="rooms-container">
+  <h1>部屋一覧</h1>
+
+  <% @rooms.each do |room| %>
+    <div class="room-card">
+      <!-- 部屋の画像 -->
+      <div class="room-images">
+        <%= image_tag room.images.first, alt: room.name, class: "room-img" %>
+      </div>
+
+      <!-- 部屋情報 -->
+      <div class="room-info">
+        <h2><%= room.name %></h2>
+        <p>広さ: <%= room.size %>㎡</p>
+        <p>ベッド: <%= room.bed_type %></p>
+        <p>設備: <%= room.facilities %></p>
+        <p>定員: <%= room.capacity %>名</p>
+
+        <!-- 料金 -->
+        <div class="room-price">
+          <p>料金: <span>¥<%= room.price %> / 泊</span></p>
+        </div>
+
+        <!-- 予約ボタン（条件分岐） -->
+        <% if user_signed_in? %>
+          <%= link_to "この部屋を予約", room_path(room), class: "btn-reserve" %>
+        <% else %>
+          <%= link_to "この部屋を予約", new_user_registration_path, class: "btn-reserve" %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

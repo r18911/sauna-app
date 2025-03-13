@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   # root "posts#index"
   root to: 'saunas#index'
   resources :saunas
+  resources :rooms
 end
