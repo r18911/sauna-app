@@ -1,0 +1,67 @@
+@import "bootstrap";
+
+/* === 部屋リスト全体のスタイル === */
+.rooms-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.rooms-container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* === 各部屋のカード === */
+.room-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+}
+
+.room-card img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.room-info {
+  margin-left: 20px;
+  text-align: left;
+}
+
+.room-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.room-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d32f2f;
+  margin: 10px 0;
+}
+
+/* === 予約ボタン === */
+.btn-reserve {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #FF9800;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-reserve:hover {
+  background: #E68900;
+}
