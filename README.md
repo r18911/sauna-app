@@ -21,7 +21,6 @@
 |--------------|--------|--------------------------------|
 | name         | string | null: false                    |
 | description  | text   | null: false                    |
-| image_url    | string |                                |
 | price        | integer| null: false                    |
 | location     | string | null: false                    |
 | capacity     | integer| null: false, default: 1        |
