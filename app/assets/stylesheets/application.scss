@@ -72,6 +72,7 @@ a:hover {
   font-size: 60px;
   font-weight: bold;
   text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .hero p {
@@ -86,12 +87,24 @@ a:hover {
   scroll-behavior: smooth;
 }
 
+.scroll-container h1 {
+  font-size: 60px;
+  letter-spacing: 6px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.scroll-container h2 {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  letter-spacing: 2px;
+}
+
 /* === 各セクションのデザイン === */
 .sauna_image, .image-section {
   scroll-snap-align: start;
   min-height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
@@ -101,23 +114,27 @@ a:hover {
 }
 
 .section1 {
-  background-image: url('/assets/360_F_166894051_oxAb8y3R1uU5aNOON3j9BkESojXb0R1e.jpg');
+  background-image: url('/assets/09a85ea7542bece3e5b8c7f5a1fbace1f38d7951.47.9.26.3.jpg');
 }
 
 .section2 {
-  background-image: url('/assets/6C2DDF2A-A980-4428-A27B-1D3A60D384DA.jpg');
-}
-
-.section3 {
   background-image: url('/assets/662a8d74-dec4-464b-b4de-49ac963cb839.jpg');
 }
+
+// .section3 {
+//   background-image: url('/assets/662a8d74-dec4-464b-b4de-49ac963cb839.jpg');
+// }
 
 /* === フッター === */
 footer {
   width: 100%;
   height: 65px;
-  padding: 10px;
+  padding-top: 10px;
   color: #D8D8D8;
-  background-color: #fff;
+  background-color: gray;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
 }
