@@ -42,9 +42,11 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_13_054251) do
   create_table "rooms", charset: "utf8mb3", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.integer "price"
-    t.string "location"
+    t.integer "size"
+    t.string "bed_type"
+    t.text "facilities"
     t.integer "capacity"
+    t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

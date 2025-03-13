@@ -1,42 +1,33 @@
 <div class="rooms-container">
   <h1>部屋一覧</h1>
 
-  <div class="room-card">
-    <img src="/assets/67cd6dc0-c224-4f4d-a3fa-0570963cb839.jpg" alt="プレミアムルーム">
-    <div class="room-info">
-      <h2>スタンダードルーム</h2>
-      <p>広さ: 25㎡</p>
-      <p>ベッド: シングル</p>
-      <p>設備: Wi-Fi, テレビ, エアコン, シャワー</p>
-      <p>定員: 1名</p>
-      <p class="room-price">料金: ¥3,000 / 泊</p>
-      <a href="#" class="btn-reserve">この部屋を予約</a>
-    </div>
-  </div>
+  <% @rooms.each do |room| %>
+    <div class="room-card">
+      <!-- 部屋の画像 -->
+      <div class="room-images">
+        <%= image_tag room.images.first, alt: room.name, class: "room-img" %>
+      </div>
 
-  <div class="room-card">
-    <img src="/assets/5f9b738d-7a3c-47cf-b3c6-466e963cb839.jpg" alt="デラックスルーム">
-    <div class="room-info">
-      <h2>デラックスルーム</h2>
-      <p>広さ: 35㎡</p>
-      <p>ベッド: ダブルサイズ</p>
-      <p>設備: Wi-Fi, テレビ, エアコン, バスタブ</p>
-      <p>定員: 2名</p>
-      <p class="room-price">料金: ¥7,000 / 泊</p>
-      <a href="#" class="btn-reserve">この部屋を予約</a>
-    </div>
-  </div>
+      <!-- 部屋情報 -->
+      <div class="room-info">
+        <h2><%= room.name %></h2>
+        <p>広さ: <%= room.size %>㎡</p>
+        <p>ベッド: <%= room.bed_type %></p>
+        <p>設備: <%= room.facilities %></p>
+        <p>定員: <%= room.capacity %>名</p>
 
-  <div class="room-card">
-    <img src="/assets/5fa0fa71-1718-4b5b-a1b9-efbe963cb839.jpg" alt="スタンダードルーム">
-    <div class="room-info">
-      <h2>プレミアムルーム</h2>
-      <p>広さ: 45㎡</p>
-      <p>ベッド: キングサイズ</p>
-      <p>設備: Wi-Fi, テレビ, シャワー</p>
-      <p>定員: 3名</p>
-      <p class="room-price">料金: ¥15,000 / 泊</p>
-      <a href="#" class="btn-reserve">この部屋を予約</a>
+        <!-- 料金 -->
+        <div class="room-price">
+          <p>料金: <span>¥<%= room.price %> / 泊</span></p>
+        </div>
+
+        <!-- 予約ボタン（条件分岐） -->
+        <% if user_signed_in? %>
+          <%= link_to "この部屋を予約", room_path(room), class: "btn-reserve" %>
+        <% else %>
+          <%= link_to "この部屋を予約", new_user_registration_path, class: "btn-reserve" %>
+        <% end %>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>
