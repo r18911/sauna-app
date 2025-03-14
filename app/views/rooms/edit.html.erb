@@ -1,0 +1,53 @@
+<div class="edit-room-container">
+  <h2>編集</h2>
+
+  <%= form_for @room, html: { multipart: true, class: "edit-room-form" } do |f| %>
+    <!-- 🔹 部屋名 -->
+    <div class="form-group">
+      <%= f.label :name, "部屋名", class: "form-label" %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+
+    <!-- 🔹 広さ -->
+    <div class="form-group">
+      <%= f.label :size, "広さ (㎡)", class: "form-label" %>
+      <%= f.number_field :size, class: "form-control" %>
+    </div>
+
+    <!-- 🔹 ベッドタイプ -->
+    <div class="form-group">
+      <%= f.label :bed_type, "ベッドタイプ", class: "form-label" %>
+      <%= f.text_field :bed_type, class: "form-control" %>
+    </div>
+
+    <!-- 🔹 設備 -->
+    <div class="form-group">
+      <%= f.label :facilities, "設備", class: "form-label" %>
+      <%= f.text_area :facilities, class: "form-control", rows: 3 %>
+    </div>
+
+    <!-- 🔹 定員 -->
+    <div class="form-group">
+      <%= f.label :capacity, "定員", class: "form-label" %>
+      <%= f.number_field :capacity, class: "form-control" %>
+    </div>
+
+    <!-- 🔹 料金 -->
+    <div class="form-group">
+      <%= f.label :price, "料金 (円)", class: "form-label" %>
+      <%= f.number_field :price, class: "form-control" %>
+    </div>
+
+    <!-- 🔹 画像アップロード -->
+    <div class="form-group">
+      <%= f.label :images, "画像を追加（複数選択可）", class: "form-label" %>
+      <%= f.file_field :images, multiple: true, class: "form-control" %>
+    </div>
+
+    <!-- 🔹 更新ボタン -->
+    <div class="form-actions">
+      <%= f.submit "更新", class: "btn btn-primary btn-lg" %>
+      <%= link_to "キャンセル", rooms_path, class: "btn btn-secondary " %>
+    </div>
+  <% end %>
+</div>

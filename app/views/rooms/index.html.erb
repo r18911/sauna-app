@@ -1,8 +1,25 @@
 <div class="rooms-container">
   <h1>部屋一覧</h1>
 
+ <div class="auth-buttons">
+    <% if user_signed_in? %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: "btn-auth btn-logout" %>
+    <% else %>
+      <%= link_to "ログイン", new_user_session_path, class: "btn-auth btn-login" %>
+      <%= link_to "新規登録", new_user_registration_path, class: "btn-auth btn-signup" %>
+    <% end %>
+  </div>
+
   <% @rooms.each do |room| %>
     <div class="room-card">
+      <!-- 🔹 管理者用の編集・削除ボタン -->
+        <% if user_signed_in? && current_user.admin? %>
+          <div class="admin-buttons">
+            <%= link_to "編集", edit_room_path(room), class: "btn-admin btn-edit" %>
+            <%= link_to "削除", room_path(room), method: :delete, data: { confirm: "本当に削除しますか？", turbo_method: :delete }, class: "btn-admin btn-delete" %>
+          </div>
+        <% end %>
+
       <!-- 部屋の画像 -->
       <div class="room-images">
         <%= image_tag room.images.first, alt: room.name, class: "room-img" %>

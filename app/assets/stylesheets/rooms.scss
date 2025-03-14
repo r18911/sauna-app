@@ -19,6 +19,7 @@
 
 /* === 各部屋のカード === */
 .room-card {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -89,5 +90,230 @@
 
 .btn-reserve:hover {
   background: #b8953f;
+  transform: scale(1.05);
+}
+
+
+
+.auth-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn-auth {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-login {
+  background: #007bff;
+  color: white;
+}
+
+.btn-login:hover {
+  background: #0056b3;
+}
+
+.btn-signup {
+  background: #28a745;
+  color: white;
+}
+
+.btn-signup:hover {
+  background: #1e7e34;
+}
+
+.btn-logout {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-logout:hover {
+  background: #a71d2a;
+}
+
+/* === 部屋登録フォームのデザイン === */
+.room-form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.room-form-container h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* フォーム全体 */
+.room-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 入力フィールド */
+.form-group {
+  text-align: left;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* ファイルアップロードボタン */
+.form-control-file {
+  border: none;
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* 送信ボタン */
+.submit-btn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background-color: #FF9800;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #E68900;
+}
+
+/* === 管理者用の編集・削除ボタン配置とデザイン === */
+.admin-buttons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.btn-admin {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-edit {
+  background: #007bff;
+  color: white;
+  border: none;
+}
+
+.btn-edit:hover {
+  background: #0056b3;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: white;
+  border: none;
+}
+
+.btn-delete:hover {
+  background: #a71d2a;
+}
+
+/* === 編集ページ全体のスタイル === */
+.edit-room-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* === ラベルのスタイル === */
+.form-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* === フォームのスタイル === */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* === ボタンのスタイル === */
+.form-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* 更新ボタン */
+.btn-primary {
+  background-color: #28a745;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* キャンセルボタン */
+.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #545b62;
   transform: scale(1.05);
 }
