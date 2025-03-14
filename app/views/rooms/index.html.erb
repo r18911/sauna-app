@@ -38,12 +38,17 @@
           <p>料金: <span>¥<%= room.price %> / 泊</span></p>
         </div>
 
-        <!-- 予約ボタン（条件分岐） -->
-        <% if user_signed_in? %>
-          <%= link_to "この部屋を予約", room_path(room), class: "btn-reserve" %>
-        <% else %>
-          <%= link_to "この部屋を予約", new_user_registration_path, class: "btn-reserve" %>
-        <% end %>
+        <!-- 🔹 追加: 詳細ボタン -->
+        <div class="room-actions">
+          <%= link_to "詳細を見る", room_path(room), class: "btn-detail" %>
+
+          <!-- 予約ボタン（条件分岐） -->
+          <% if user_signed_in? %>
+            <%= link_to "この部屋を予約", new_reservation_path(room_id: room.id), class: "btn-reserve" %>
+          <% else %>
+            <%= link_to "この部屋を予約", new_user_registration_path, class: "btn-reserve" %>
+          <% end %>
+        </div>
       </div>
     </div>
   <% end %>

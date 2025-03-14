@@ -1,0 +1,37 @@
+<div class="reservation-form-container">
+  <h2>予約フォーム</h2>
+
+  <%= form_with model: @reservation, url: reservations_path, local: true do |f| %>
+    
+    <!-- 予約する部屋情報 -->
+    <div class="reservation-room-info">
+      <h3>予約する部屋: <%= @room.name %></h3>
+      <%= image_tag @room.images.first, class: "reservation-room-img" if @room.images.attached? %>
+    </div>
+
+    <!-- 予約開始日時 -->
+    <div class="form-group">
+      <%= f.label :start_time, "チェックイン日時" %>
+      <%= f.datetime_local_field :start_time, class: "form-control", required: true %>
+    </div>
+
+    <!-- 予約終了日時 -->
+    <div class="form-group">
+      <%= f.label :end_time, "チェックアウト日時" %>
+      <%= f.datetime_local_field :end_time, class: "form-control", required: true %>
+    </div>
+
+    <!-- 予約人数 -->
+    <div class="form-group">
+      <%= f.label :number_of_people, "宿泊人数" %>
+      <%= f.number_field :number_of_people, class: "form-control", min: 1, required: true %>
+    </div>
+
+    <!-- 予約ボタン -->
+    <div class="form-actions">
+      <%= f.submit "予約する", class: "btn btn-primary btn-lg" %>
+      <%= link_to "キャンセル", rooms_path, class: "btn btn-secondary btn-lg" %>
+    </div>
+
+  <% end %>
+</div>
