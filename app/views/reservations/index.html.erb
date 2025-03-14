@@ -1,0 +1,36 @@
+<div class="reservation-list-container">
+  <h2>予約履歴</h2>
+
+  <% if @reservations.any? %>
+    <table class="reservation-table">
+      <thead>
+        <tr>
+          <th>部屋名</th>
+          <th>チェックイン</th>
+          <th>チェックアウト</th>
+          <th>人数</th>
+          <th>ステータス</th>
+          <th>アクション</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @reservations.each do |reservation| %>
+          <tr>
+            <td><%= reservation.room.name %></td>
+            <td><%= l reservation.start_time, format: :short %></td>
+            <td><%= l reservation.end_time, format: :short %></td>
+            <td><%= reservation.number_of_people %></td>
+            <td>
+              <% if reservation.status == 0 %>
+                <%= link_to "編集", edit_reservation_path(reservation), class: "btn btn-edit" %>
+                <%= link_to "キャンセル", reservation_path(reservation), method: :delete, data: { confirm: "本当にキャンセルしますか？" }, class: "btn btn-cancel" %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>現在、予約履歴はありません。</p>
+  <% end %>
+</div>

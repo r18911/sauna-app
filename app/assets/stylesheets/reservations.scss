@@ -74,3 +74,45 @@
   background-color: #545b62;
   transform: scale(1.05);
 }
+
+
+// 予約履歴確認
+
+.reservation-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.reservation-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.reservation-table th, .reservation-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.status {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.status.pending { background: #FFD700; color: #333; }
+.status.confirmed { background: #4CAF50; color: #fff; }
+.status.cancelled { background: #FF5733; color: #fff; }
+
+.btn {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-edit { background: #007bff; color: white; }
+.btn-cancel { background: #dc3545; color: white; }

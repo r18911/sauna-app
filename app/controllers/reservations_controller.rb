@@ -2,6 +2,14 @@ class ReservationsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_room, only: [:new, :create]
 
+  def index
+    if current_user.admin?
+      @reservations = Reservation.all.order(start_time: :desc)
+    else
+      @reservations = current_user.reservations.order(start_time: :desc)
+    end
+  end
+
   def new
     @reservation = Reservation.new
   end
