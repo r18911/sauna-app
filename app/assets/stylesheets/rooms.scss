@@ -19,6 +19,7 @@
 
 /* === 各部屋のカード === */
 .room-card {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
