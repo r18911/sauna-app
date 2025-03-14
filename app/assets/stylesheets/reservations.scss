@@ -76,26 +76,35 @@
 }
 
 
-// 予約履歴確認
-
+/* 予約履歴確認 */
 .reservation-list-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
 
+/* テーブルデザイン */
 .reservation-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
 
-.reservation-table th, .reservation-table td {
-  border: 1px solid #ddd;
-  padding: 10px;
+.reservation-table th, 
+.reservation-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
   text-align: center;
+  white-space: nowrap; /* 改行を防ぐ */
+  font-size: 16px;
 }
 
+.reservation-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+/* ステータスのデザイン */
 .status {
   font-weight: bold;
   padding: 5px 10px;
@@ -106,13 +115,28 @@
 .status.confirmed { background: #4CAF50; color: #fff; }
 .status.cancelled { background: #FF5733; color: #fff; }
 
+/* ボタンのデザイン */
 .btn {
   padding: 8px 12px;
   border: none;
   cursor: pointer;
   text-decoration: none;
   border-radius: 5px;
+  display: inline-block;
+  font-size: 14px;
 }
 
-.btn-edit { background: #007bff; color: white; }
-.btn-cancel { background: #dc3545; color: white; }
+.btn-edit {
+  background: #007bff;
+  color: white;
+  margin-right: 8px; /* 編集とキャンセルの間隔を調整 */
+}
+
+.btn-cancel {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-edit:hover, .btn-cancel:hover {
+  opacity: 0.8;
+}

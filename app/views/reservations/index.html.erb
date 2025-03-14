@@ -5,6 +5,9 @@
     <table class="reservation-table">
       <thead>
         <tr>
+          <% if current_user.admin? %>
+            <th>予約者</th>
+          <% end %>
           <th>部屋名</th>
           <th>チェックイン</th>
           <th>チェックアウト</th>
@@ -16,14 +19,17 @@
       <tbody>
         <% @reservations.each do |reservation| %>
           <tr>
+            <% if current_user.admin? %>
+              <td><%= reservation.user.email %></td>
+            <% end %>
             <td><%= reservation.room.name %></td>
-            <td><%= l reservation.start_time, format: :short %></td>
-            <td><%= l reservation.end_time, format: :short %></td>
+            <td><%= reservation.start_time.strftime("%m月%d日 %H:%M") %></td>
+            <td><%= reservation.end_time.strftime("%m月%d日 %H:%M") %></td>
             <td><%= reservation.number_of_people %></td>
             <td>
-              <% if reservation.status == 0 %>
+              <% if current_user.admin? || reservation.status == 0 %>
                 <%= link_to "編集", edit_reservation_path(reservation), class: "btn btn-edit" %>
-                <%= link_to "キャンセル", reservation_path(reservation), method: :delete, data: { confirm: "本当にキャンセルしますか？" }, class: "btn btn-cancel" %>
+                <%= link_to "キャンセル", reservation_path(reservation), method: :delete, data: { confirm: "本当にキャンセルしますか？", turbo_method: :delete }, class: "btn btn-cancel" %>
               <% end %>
             </td>
           </tr>
