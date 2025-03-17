@@ -5,9 +5,9 @@ class ReservationsController < ApplicationController
 
   def index
     if current_user.admin?
-      @reservations = Reservation.all.order(start_time: :desc)
+      @reservations = Reservation.all.order(created_at: :desc)
     else
-      @reservations = current_user.reservations.order(start_time: :desc)
+      @reservations = current_user.reservations.order(created_at: :desc)
     end
   end
 
