@@ -17,6 +17,26 @@
   font-family: 'Playfair Display', serif;
 }
 
+/* トップページに戻るボタン */
+.top-navigation {
+  text-align: center;
+}
+
+.btn-home {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #28a745;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-home:hover {
+  background-color: #218838;
+}
+
 /* === 各部屋のカード === */
 .room-card {
   position: relative;
@@ -73,6 +93,123 @@
   font-weight: bold;
   color: #c9a74a;
   margin-top: 10px;
+}
+
+/* === ボタンを横並びに配置するコンテナ === */
+.room-actions {
+  display: flex;
+  justify-content: center; /* ボタンを中央揃え */
+  align-items: center; /* 縦方向の中央揃え */
+  gap: 15px; /* ボタン間のスペース */
+  margin-top: 15px;
+}
+
+/* === 詳細ボタンのスタイル === */
+.btn-detail {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #3498db; /* 青系の色 */
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-detail:hover {
+  background: #2980b9;
+}
+
+/* === 部屋詳細ページ全体のスタイル === */
+
+.detail-page {
+  background-color: #ece7e1;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.detail-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* === 部屋の画像 === */
+.detail-images {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.detail-img {
+  width: 350px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #ddd;
+}
+
+/* === 部屋情報 === */
+.detail-info {
+  text-align: left;
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.detail-info p {
+  margin: 10px 0;
+}
+
+/* === 予約ボタンと戻るボタン === */
+.detail-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.detail-btn-reserve {
+  background: #c9a74a;
+  color: white;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.detail-btn-reserve:hover {
+  background: #b8953f;
+  transform: scale(1.05);
+}
+
+.detail-btn-back {
+  background: #6c757d;
+  color: white;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.detail-btn-back:hover {
+  background: #545b62;
+  transform: scale(1.05);
 }
 
 /* === 予約ボタンのデザイン === */
@@ -136,6 +273,7 @@
 .btn-logout:hover {
   background: #a71d2a;
 }
+
 
 /* === 部屋登録フォームのデザイン === */
 .room-form-container {

@@ -1,0 +1,172 @@
+.reservation-form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.reservation-room-info {
+  margin-bottom: 20px;
+}
+
+.reservation-room-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-primary {
+  background-color: #28a745;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+  min-width: 120px;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+  min-width: 120px;
+}
+
+.btn-secondary:hover {
+  background-color: #545b62;
+  transform: scale(1.05);
+}
+
+
+/* 予約履歴確認 */
+.reservation-list-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* テーブルデザイン */
+.reservation-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.reservation-table th, 
+.reservation-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+  white-space: nowrap; /* 改行を防ぐ */
+  font-size: 16px;
+}
+
+.reservation-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+/* ステータスのデザイン */
+.status {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.status.pending { background: #FFD700; color: #333; }
+.status.confirmed { background: #4CAF50; color: #fff; }
+.status.cancelled { background: #FF5733; color: #fff; }
+
+/* ボタンのデザイン */
+.btn {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.btn-edit {
+  background: #007bff;
+  color: white;
+  margin-right: 8px; /* 編集とキャンセルの間隔を調整 */
+}
+
+.btn-cancel {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-edit:hover {
+  opacity: 0.8;
+}
+
+.btn-cancel:hover { background-color: #c82333; }
+
+// トップページ/部屋一覧に戻るボタン
+
+.reservation-actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-home, .btn-list {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.btn-home {
+  background-color: #28a745; /* 緑 */
+}
+
+.btn-list {
+  background-color: #007bff; /* 青 */
+}
+
+.btn-home:hover { background-color: #218838; }
+.btn-list:hover { background-color: #0056b3; }

@@ -1,0 +1,54 @@
+<div class="reservation-list-container">
+  <h2>予約履歴</h2>
+
+  <% if @reservations.any? %>
+    <table class="reservation-table">
+      <thead>
+        <tr>
+          <% if current_user.admin? %>
+            <th>予約者</th>
+          <% end %>
+          <th>部屋名</th>
+          <th>チェックイン</th>
+          <th>チェックアウト</th>
+          <th>人数</th>
+          <th>ステータス</th>
+          <th>アクション</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @reservations.each do |reservation| %>
+          <tr>
+            <% if current_user.admin? %>
+              <td><%= reservation.user.email %></td>
+            <% end %>
+            <td><%= reservation.room.name %></td>
+            <td><%= reservation.start_time.strftime("%m月%d日 %H:%M") %></td>
+            <td><%= reservation.end_time.strftime("%m月%d日 %H:%M") %></td>
+            <td><%= reservation.number_of_people %></td>
+            <td>
+              <% if current_user.admin? || reservation.status == 0 %>
+                <%= link_to "編集", edit_reservation_path(reservation), class: "btn btn-edit" %>
+                <%= link_to "キャンセル", reservation_path(reservation), method: :delete, data: { confirm: "本当にキャンセルしますか？", turbo_method: :delete }, class: "btn btn-cancel" %>
+              <% end %>
+            </td>
+            <td>
+              <!-- 🔹 決済ボタン（利用者向け・未払いのみ） -->
+              <% unless current_user.admin? %>
+                <% if reservation.status == 0 %>
+                  <%= link_to "決済する", class: "btn btn-pay" %>
+                <% end %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>現在、予約履歴はありません。</p>
+  <% end %>
+  <div class="reservation-actions">
+    <%= link_to "トップページへ戻る", root_path, class: "btn btn-home" %>
+    <%= link_to "部屋一覧へ戻る", rooms_path, class: "btn btn-list" %>
+  </div>
+</div>

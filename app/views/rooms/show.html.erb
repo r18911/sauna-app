@@ -1,28 +1,32 @@
-<div class="room-detail-container">
-  <h2><%= @room.name %></h2>
+<div class="detail-page">
+  <div class="detail-container">
+    <h2><%= @room.name %></h2>
 
-  <!-- 部屋の画像 -->
-  <div class="room-images">
-    <% @room.images.each do |image| %>
-      <%= image_tag image, class: "room-img" %>
-    <% end %>
+    <!-- 部屋の画像 -->
+    <div class="detail-images">
+      <% @room.images.each do |image| %>
+        <%= image_tag image, class: "detail-img" %>
+      <% end %>
+    </div>
+
+    <!-- 部屋情報 -->
+    <div class="detail-info">
+      <p>広さ: <%= @room.size %>㎡</p>
+      <p>ベッド: <%= @room.bed_type %></p>
+      <p>設備: <%= @room.facilities %></p>
+      <p>定員: <%= @room.capacity %>名</p>
+      <p>料金: ¥<%= @room.price %> / 泊</p>
+    </div>
+
+    <!-- 予約ボタン & 戻るボタン -->
+    <div class="detail-actions">
+      <% if user_signed_in? %>
+        <%= link_to "この部屋を予約", "#", class: "detail-btn-reserve" %>
+      <% else %>
+        <%= link_to "この部屋を予約", new_user_registration_path, class: "detail-btn-reserve" %>
+      <% end %>
+
+      <%= link_to "戻る", rooms_path, class: "detail-btn-back" %>
+    </div>
   </div>
-
-  <!-- 部屋情報 -->
-  <div class="room-info">
-    <p>広さ: <%= @room.size %>㎡</p>
-    <p>ベッド: <%= @room.bed_type %></p>
-    <p>設備: <%= @room.facilities %></p>
-    <p>定員: <%= @room.capacity %>名</p>
-    <p>料金: ¥<%= @room.price %> / 泊</p>
-  </div>
-
-  <!-- 予約ボタン -->
-  <% if user_signed_in? %>
-    <%= link_to "この部屋を予約", "#", class: "btn-reserve" %>
-  <% else %>
-    <%= link_to "この部屋を予約", new_user_registration_path, class: "btn-reserve" %>
-  <% end %>
-
-  <%= link_to "戻る", rooms_path, class: "btn-back" %>
 </div>
