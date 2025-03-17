@@ -1,0 +1,7 @@
+<%= form_with  model: @payment, url: reservation_payments_path(@reservation), id: 'charge-form', class: 'card-form',local: true do |f| %>
+  <div class='form-wrap'>
+    <%= f.label :amount, "金額" %>
+    <%= f.text_field :amount, class:"amount", placeholder:"例)2000" %>
+  </div>
+  <%= f.submit "購入", class:"button", id: "button" %>
+<% end %>
