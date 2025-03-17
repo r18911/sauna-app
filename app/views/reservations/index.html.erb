@@ -36,7 +36,7 @@
               <!-- 🔹 決済ボタン（利用者向け・未払いのみ） -->
               <% unless current_user.admin? %>
                 <% if reservation.status == 0 %>
-                  <%= link_to "決済する", class: "btn btn-pay" %>
+                  <%= link_to "決済する",reservation_payments_path(reservation), class: "btn btn-pay" %>
                 <% end %>
               <% end %>
             </td>
