@@ -31,6 +31,7 @@
       </div>
     <% end %>
 
-    <p>アカウントをお持ちでない方？ <br><%= link_to "新規登録はこちら", new_user_registration_path %></p>
+    <p>アカウントをお持ちでない方？ <br><%= link_to "新規登録はこちら", new_user_registration_path, class: "sign-btn" %></p>
   </div>
 </div>
+<%= link_to "部屋一覧に戻る", rooms_path, class: "back-to-rooms-btn" %>

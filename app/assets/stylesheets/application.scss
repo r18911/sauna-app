@@ -35,7 +35,7 @@ a:hover {
 /* === ヘッダー === */
 
 .navbar {
-  background: transparent;
+  background: transparent !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -66,17 +66,21 @@ a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url('/assets/662a8d74-313c-4251-bd64-4df9963cb839.jpg');
+  background-image: url('huum-DINpA68Jt2U-unsplash.jpg');
   background-size: cover;
   background-position: center;
   color: white;
 }
 
 .hero h1 {
-  font-size: 60px;
+  font-size: 65px;
   font-weight: bold;
   text-transform: uppercase;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero span {
+  font-size: 45px;
 }
 
 .hero p {
@@ -85,10 +89,7 @@ a:hover {
 
 /* === スクロールスナップ === */
 .scroll-container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
   min-height: 100vh;
-  scroll-behavior: smooth;
 }
 
 .scroll-container h1 {
@@ -104,8 +105,7 @@ a:hover {
 
 /* === 各セクションのデザイン === */
 .sauna_image, .image-section {
-  scroll-snap-align: start;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -118,11 +118,117 @@ a:hover {
 }
 
 .section1 {
-  background-image: url('/assets/09a85ea7542bece3e5b8c7f5a1fbace1f38d7951.47.9.26.3.jpg');
+  background-image: url('pexels-pavel-danilyuk-6667418.jpg');
 }
 
 .section2 {
-  background-image: url('/assets/662a8d74-dec4-464b-b4de-49ac963cb839.jpg');
+  background-image: url('pexels-huum-sauna-heaters-718199222-18285439.jpg');
+}
+
+
+.map-description {
+  text-align: center;
+  font-size: 15px;
+  color: #333;
+  padding: 30px 10px;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+.map-description p {
+  margin: 0;
+}
+
+
+.map-container {
+  width: 100%;
+  height: 500px;
+  background: white;
+  padding: 5px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* 🔹 PAGE TOPボタン */
+.page-top-container {
+  text-align: center;
+  padding: 10px 0;
+  background: #f8f5f1;
+}
+
+.page-top {
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #333;
+  text-decoration: none;
+  // font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.page-top:hover {
+  text-decoration: underline;
+}
+
+/* 🔹 ホテル情報エリア */
+.hotel-info-container {
+  text-align: center;
+  background: #f3f1ec;
+  padding: 30px 0;
+}
+
+.hotel-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.hotel-subtext {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 15px;
+}
+
+.hotel-address {
+  font-size: 16px;
+  color: #333;
+}
+
+.hotel-actions {
+  margin-top: 15px;
+}
+
+.btn-booking, .btn-tel {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-booking {
+  background: #8B6A45;
+  padding: 8px 45px;
+  color: white;
+}
+
+.btn-tel {
+  padding: 8px 12px;
+  background: white;
+  border: 2px solid black;
+  color: black;
+}
+
+.bi-instagram {
+  width: 30px;
+  height: 30px;
+  color: #504949;
 }
 
 /* === フッター === */
@@ -137,4 +243,94 @@ footer {
   justify-content: center;
   align-items: center;
   font-size: 12px;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+/* 🔹 ドロップダウンメニューのスタイル */
+.dropdown-menu {
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* 🔹 メニューアイテムのスタイル */
+.dropdown-menu a {
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+}
+
+/* 🔹 メニューアイテムのホバー時 */
+.dropdown-menu a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* 🔹 MENUボタン */
+.menu-btn {
+  cursor: pointer;
+}
+
+/* 🔹 ドロップダウンメニューを表示する時 */
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.flash-message-container {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.flash-message {
+  color: rgba(0, 128, 0, 0.9);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  animation: fadeOut 3s forwards;
+}
+
+/* 3秒後に消える */
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+.welcome-message {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  font-size: 16px;
+  color: #333;
+  text-decoration: underline;
+}
+
+.sign-btn {
+  text-decoration: underline;
+}
+
+.back-to-rooms-btn {
+  position: absolute;
+  bottom: 40px;
+  left: 160px;
+  font-size: 16px;
+  text-decoration: underline;
 }

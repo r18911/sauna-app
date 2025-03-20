@@ -351,6 +351,24 @@
   gap: 8px;
 }
 
+.btn-add-room {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  transition: background 0.3s;
+  margin-bottom: 20px;
+}
+
+.btn-add-room:hover {
+  background-color: #218838;
+  text-decoration: none;
+}
+
 .btn-admin {
   padding: 6px 12px;
   font-size: 14px;

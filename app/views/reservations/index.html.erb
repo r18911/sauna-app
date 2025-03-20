@@ -1,6 +1,10 @@
 <div class="reservation-list-container">
   <h2>予約履歴</h2>
 
+  <% if user_signed_in? %>
+    <p class="welcome-message"><%= current_user.nickname.presence || "ゲスト" %> さん</p>
+  <% end %>
+
   <% if @reservations.any? %>
     <table class="reservation-table">
       <thead>
@@ -23,8 +27,8 @@
               <td><%= reservation.user.email %></td>
             <% end %>
             <td><%= reservation.room.name %></td>
-            <td><%= reservation.start_time.strftime("%m月%d日 %H:%M") %></td>
-            <td><%= reservation.end_time.strftime("%m月%d日 %H:%M") %></td>
+            <td><%= reservation.start_time.strftime("%m月%d日") %></td>
+            <td><%= reservation.end_time.strftime("%m月%d日") %></td>
             <td><%= reservation.number_of_people %></td>
             <td>
               <% if current_user.admin? || reservation.status == 0 %>
@@ -33,13 +37,26 @@
               <% end %>
             </td>
             <td>
-              <!-- 🔹 決済ボタン（利用者向け・未払いのみ） -->
-              <% unless current_user.admin? %>
-                <% if reservation.status == 0 %>
-                  <%= link_to "決済する",reservation_payments_path(reservation), class: "btn btn-pay" %>
+            <% if reservation.payment.nil? %>
+              <% if current_user.admin? %>
+                <span class="text-danger">決済情報なし</span>
+              <% else %>
+                <%= link_to "決済する", reservation_payments_path(reservation), class: "btn btn-pay" %>
+              <% end %>
+            <% else %>
+              <% if current_user.admin? %>
+                <span class="<%= reservation.payment.payment_status == 0 ? 'text-warning' : 'text-success' %>">
+                  <%= reservation.payment.payment_status == 0 ? "未決済" : "支払い済み" %>
+                </span>
+              <% else %>
+                <% if reservation.payment.payment_status == 0 %>
+                  <%= link_to "決済する", reservation_payments_path(reservation), class: "btn btn-pay" %>
+                <% else %>
+                  <span class="text-success">支払い済み</span>
                 <% end %>
               <% end %>
-            </td>
+            <% end %>
+          </td>
           </tr>
         <% end %>
       </tbody>

@@ -6,3 +6,16 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "card"
+import "menu"
+
+document.addEventListener("turbo:load", function () {
+  const pageTopBtn = document.querySelector(".page-top");
+
+  pageTopBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+});

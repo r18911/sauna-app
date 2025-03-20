@@ -1,6 +1,16 @@
 <div class="rooms-container">
   <h1>部屋一覧</h1>
 
+  <% if user_signed_in? %>
+    <p class="welcome-message"><%= current_user.nickname.presence || "ゲスト" %> さん</p>
+  <% end %>
+
+  <% if user_signed_in? && current_user.admin? %>
+    <div class="room-actions">
+      <%= link_to "部屋を追加する", new_room_path, class: "btn-admin btn-add-room" %>
+    </div>
+  <% end %>
+
  <div class="auth-buttons">
     <% if user_signed_in? %>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: "btn-auth btn-logout" %>
@@ -47,7 +57,7 @@
           <% if user_signed_in? %>
             <%= link_to "この部屋を予約", new_reservation_path(room_id: room.id), class: "btn-reserve" %>
           <% else %>
-            <%= link_to "この部屋を予約", new_user_registration_path, class: "btn-reserve" %>
+            <%= link_to "この部屋を予約", new_user_session_path, class: "btn-reserve" %>
           <% end %>
         </div>
       </div>

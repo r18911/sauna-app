@@ -21,9 +21,9 @@
     <!-- 予約ボタン & 戻るボタン -->
     <div class="detail-actions">
       <% if user_signed_in? %>
-        <%= link_to "この部屋を予約", "#", class: "detail-btn-reserve" %>
+        <%= link_to "この部屋を予約", new_reservation_path(room_id: @room.id), class: "detail-btn-reserve" %>
       <% else %>
-        <%= link_to "この部屋を予約", new_user_registration_path, class: "detail-btn-reserve" %>
+        <%= link_to "この部屋を予約", new_user_session_path, class: "detail-btn-reserve" %>
       <% end %>
 
       <%= link_to "戻る", rooms_path, class: "detail-btn-back" %>
