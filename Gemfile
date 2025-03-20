@@ -79,3 +79,4 @@ gem 'factory_bot_rails'
 gem 'payjp'
 gem 'gon'
 gem 'faker'
+gem "cssbundling-rails"

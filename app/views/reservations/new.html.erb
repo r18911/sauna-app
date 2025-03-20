@@ -13,13 +13,13 @@
     <!-- 予約開始日時 -->
     <div class="form-group">
       <%= f.label :start_time, "チェックイン日時" %>
-      <%= f.datetime_local_field :start_time, class: "form-control", required: true %>
+      <%= f.date_field :start_time, class: "form-control", id: "checkin-time", required: true %>
     </div>
 
     <!-- 予約終了日時 -->
     <div class="form-group">
       <%= f.label :end_time, "チェックアウト日時" %>
-      <%= f.datetime_local_field :end_time, class: "form-control", required: true %>
+      <%= f.date_field :end_time, class: "form-control", id: "checkout-time", required: true %>
     </div>
 
     <!-- 予約人数 -->

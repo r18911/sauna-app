@@ -1,27 +1,114 @@
-.card-form{
-  width: 500px;
-}
-
-.form-wrap{
+/* ステップバー全体のスタイル */
+.progress-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px 0;
+  position: relative;
+  border-bottom: 3px solid #ddd;
 }
 
-.exp_month{
-  resize:none;
+/* ステップごとのスタイル */
+.step {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  color: #aaa;
+  font-weight: bold;
+  position: relative;
 }
 
-.exp_year{
-  resize:none;
+/* アクティブなステップ（現在のステータス） */
+.step.active {
+  color: #007bff;
+  position: relative;
 }
 
-.input-expiration-date-wrap{
+/* アクティブなステップの下にラインを引く */
+.step.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #007bff;
+  bottom: -5px;
+  left: 0;
+}
+
+
+
+/* 決済フォーム全体のスタイル */
+.card-form {
+  max-width: 400px;
+  margin: 50px auto; /* 中央寄せ */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* フォーム内のラベルと入力欄の調整 */
+.form-wrap {
+  margin-bottom: 15px;
+}
+
+.form-wrap label, 
+.form-wrap p {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* 入力フィールドのデザイン */
+.input-default,
+.amount {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+.input-default:focus,
+.amount:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* ボタンのデザイン */
+.button {
+  width: 80%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.button-back {
+  background-color: #6c757d;
+  width: 40%;
+}
+
+.button-back:hover {
+  background-color: #5a6268;
+}
+
+.form-actions {
   display: flex;
-}
-
-
-.button{
-  margin-top: 30px;
-  height: 30px;
-  width: 100px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
 }

@@ -7,4 +7,13 @@ class ApplicationController < ActionController::Base
   def after_sign_up_path_for(resource)
     rooms_path # 新規登録後も部屋一覧ページへ
   end
+
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:nickname])
+  end
 end

@@ -74,16 +74,12 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_17_013704) do
   end
 
   create_table "saunas", charset: "utf8mb3", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.integer "price"
-    t.string "location"
-    t.integer "capacity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", charset: "utf8mb3", force: :cascade do |t|
+    t.string "nickname", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
