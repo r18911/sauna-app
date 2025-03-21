@@ -13,8 +13,8 @@ Saunaappは、ユーザーがサウナを予約できる会員制の予約管理
 ## テスト用アカウント
 テスト用
 <br>ユーザー Email：aaa@aaa
-<br>管理者 Email：admin@admin
 <br>ユーザー Password：aaa111
+<br>管理者 Email：admin@admin
 <br>管理者 Password：saunaapp
 <br>※ログイン機能等を実装した場合は、ログインに必要な情報を記載。
 <br>※またBasic認証等を設けている場合は、そのID/Passも記載すること。
