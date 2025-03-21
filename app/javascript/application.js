@@ -19,3 +19,15 @@ document.addEventListener("turbo:load", function () {
     });
   });
 });
+
+
+document.addEventListener("turbo:load", function () {
+  var carouselElement = document.querySelector("#carouselExampleFade");
+  if (carouselElement) {
+    var carousel = new bootstrap.Carousel(carouselElement, {
+      interval: 8000,
+      ride: "carousel",
+      pause: false,
+    });
+  }
+});

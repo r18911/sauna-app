@@ -1,0 +1,78 @@
+/* === ヒーローセクション === */
+.daytrips-hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('huum-DINpA68Jt2U-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.daytrips-hero h1 {
+  font-size: 65px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.daytrips-hero span {
+  font-size: 45px;
+}
+
+.daytrips-hero p {
+  font-size: 24px;
+}
+
+/* 料金表の全体デザイン */
+.price-table {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* 見出し */
+.price-table h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* 注意書き */
+.note, .notice, .maintenance {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* 料金表のスタイリング */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: #f8f8f8;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+/* 左側のカテゴリ列 */
+th.category {
+  width: 20%;
+  background-color: #e7e3d9;
+  font-weight: bold;
+}
+
+/* メンテナンス注意 */
+.maintenance {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+}

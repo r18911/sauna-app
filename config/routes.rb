@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :saunas
   resources :rooms
   resources :facilities
+  resources :daytrips
   resources :reservations do
     resources :payments
   end
