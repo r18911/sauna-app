@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   root to: 'saunas#index'
   resources :saunas
   resources :rooms
+  resources :facilities
   resources :reservations do
     resources :payments
   end
