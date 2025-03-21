@@ -80,3 +80,6 @@ gem 'payjp'
 gem 'gon'
 gem 'faker'
 gem "cssbundling-rails"
+group :production do
+  gem 'pg'
+end
