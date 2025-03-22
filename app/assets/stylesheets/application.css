@@ -3,7 +3,7 @@
 
 
 /* Bootstrapの読み込み */
-@import "bootstrap";
+/* @import "bootstrap"; */
 @import "rooms";
 @import "auth";
 @import "reservations";
