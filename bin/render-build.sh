@@ -6,7 +6,7 @@ set -o errexit
 # Node.js & Yarnのインストール追加
 # -------------------------
 curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
-apt-get install -y nodejs
+# apt-get install -y nodejs
 npm install -g yarn
 
 # -------------------------
