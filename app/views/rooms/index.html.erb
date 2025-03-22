@@ -33,7 +33,7 @@
 
       <!-- 部屋の画像 -->
       <div class="room-images">
-        <%= image_tag room.images.first, alt: room.name, class: "room-img" %>
+        <%= image_tag url_for(room.images.first), alt: room.name, class: "room-img" %>
       </div>
 
       <!-- 部屋情報 -->
