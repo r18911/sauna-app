@@ -6,7 +6,7 @@
   <div class="step">予約完了</div>
 </div>
 
-<%= form_with  model: @payment, url: reservation_payments_path(@reservation), id: 'charge-form', class: 'card-form',local: true do |f| %>
+<%= form_with  model: @payment, url: reservation_payments_path(@reservation), id: 'charge-form', class: 'card-form' do |f| %>
   <%= render 'layouts/error_messages', model: @payment %>
   <div class='form-wrap'>
     <%= f.label :amount, "お支払い金額" %>
