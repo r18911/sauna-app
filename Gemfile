@@ -83,3 +83,4 @@ group :production do
   gem 'pg'
 end
 gem 'execjs'
+gem 'mini_racer'
