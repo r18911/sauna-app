@@ -1,9 +1,9 @@
 {
   "name": "app",
   "private": true,
-  "scripts": {
-    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify"
-  },
+ "scripts": {
+  "build:css": "postcss ./app/assets/stylesheets/application.scss -o ./app/assets/builds/application.css"
+},
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
