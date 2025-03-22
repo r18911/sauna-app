@@ -3,3 +3,9 @@
 //= link_tree ../../../vendor/javascript .js
 //= link_tree ../builds
 //= link application.css
+//= link rooms.css
+//= link auth.css
+//= link reservations.css
+//= link payments.css
+//= link facilities.css
+//= link daytrips.css

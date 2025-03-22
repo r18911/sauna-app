@@ -4,12 +4,12 @@
 
 /* Bootstrapの読み込み */
 /* @import "bootstrap"; */
-@import "rooms";
+/* @import "rooms";
 @import "auth";
 @import "reservations";
 @import "payments";
 @import "facilities";
-@import "daytrips";
+@import "daytrips"; */
 
 /* // @import "tailwindcss/base";
 // @import "tailwindcss/components";
