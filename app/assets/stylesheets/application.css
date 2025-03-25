@@ -341,7 +341,7 @@ footer p {
 
 
 .welcome-message {
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 40px;
   font-size: 16px;

@@ -490,8 +490,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 20px;
-      width: 80% !important;
+      padding: 50px 0 25px !important;
+      width: 90% !important;
       box-sizing: border-box;
     }
   
@@ -529,7 +529,7 @@
       align-items: center;
       width: 100%;
       gap: 10px;
-      /* text-align: center; */
+      margin: 0 auto;
     }
   
     .btn-detail,
@@ -557,15 +557,22 @@
       gap: 15px;
     }
   
+    .auth-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
     .btn-auth {
       width: 100%;
+      max-width: 120px;
       font-size: 16px;
-    }
-  
-    .auth-buttons {
-      margin: 0 auto;
-      gap: 10px;
-      max-width: 130px;
+      padding: 5px 15px;
+      text-align: center;
     }
   
     .admin-buttons {
@@ -590,8 +597,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 25px;
-      width: 80%;
+      padding: 50px 0 25px !important;
+      width: 90%;
       box-sizing: border-box;
     }
   
@@ -602,7 +609,7 @@
 
     .room-images {
       width: 90%;
-      height: 300px;
+      height: 350px;
       margin-bottom: 15px;
     }
   
@@ -625,10 +632,11 @@
     }
   
     .room-actions {
-      display: flex;
+      /* display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: center; */
+      margin: 0 auto;
       width: 100%;
       gap: 10px;
     }
@@ -661,6 +669,6 @@
     }
   
     .admin-buttons {
-      flex-wrap: wrap;
+      /* flex-wrap: wrap; */
     }
   }
