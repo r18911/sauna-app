@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :room do
-    name { "シングルルーム" }
-    size { "#{rand(20..50)}㎡" }
-    bed_type { ["シングル", "ダブル", "ツイン"].sample }
-    facilities { "Wi-Fi, エアコン, テレビ, バスタブ" }
-    price { 5000 }
-    capacity { rand(1..4) }
+    name       { Faker::Space.star }
+    size       { "#{Faker::Number.between(from: 15, to: 80)}㎡" }
+    bed_type   { Faker::Commerce.product_name }
+    facilities { Array.new(3) { Faker::Appliance.equipment }.join(', ') }
+    price      { Faker::Number.between(from: 3000, to: 50000) }
+    capacity   { Faker::Number.between(from: 1, to: 10) }
   end
 end
