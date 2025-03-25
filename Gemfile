@@ -84,3 +84,4 @@ group :production do
 end
 gem 'execjs'
 gem "aws-sdk-s3", require: false
+gem 'mini_racer', platforms: :ruby
