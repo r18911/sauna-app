@@ -39,10 +39,10 @@ Saunaappは、「もっと気軽にサウナを楽しめたらいいのに」と
 ## 実装した機能についての画像やGIFおよびその説明
 |ページ|説明|
 |---|------------------|
-|![トップページのGIF](URL_TO_GIF)|トップページ　　　　　　　　　　　　　　　　　　　　　　|
-|![ユーザー機能のGIF](URL_TO_GIF)|ユーザー機能<br>・新規登録<br>・ログイン/ログアウト|
-|![予約機能のGIF](URL_TO_GIF)|予約機能<br>・予約登録<br>・予約一覧表示<br>・予約の編集・キャンセル|
-|![支払い機能のGIF](URL_TO_GIF)|支払い機能|
+|[![Image from Gyazo](https://i.gyazo.com/67d4223f5383007d643fc617a9ab43db.gif)](https://gyazo.com/67d4223f5383007d643fc617a9ab43db)|トップページ　　　　　　　　　　　　　　　　　　　　　　|
+|[![Image from Gyazo](https://i.gyazo.com/cd4986cd8a7d787b2b0c76752e9f1d55.gif)](https://gyazo.com/cd4986cd8a7d787b2b0c76752e9f1d55)[![Image from Gyazo](https://i.gyazo.com/63404e2b68cfe820ab1f7f23039d360b.gif)](https://gyazo.com/63404e2b68cfe820ab1f7f23039d360b)|ユーザー機能<br>・新規登録<br>・ログイン/ログアウト|
+|[![Image from Gyazo](https://i.gyazo.com/2ff85349656ff8592dd73f045a0e1950.gif)](https://gyazo.com/2ff85349656ff8592dd73f045a0e1950)[![Image from Gyazo](https://i.gyazo.com/5be501aed9ab859666d6afb216772344.gif)](https://gyazo.com/5be501aed9ab859666d6afb216772344)|予約機能<br>・予約登録<br>・予約一覧表示<br>・予約の編集・キャンセル|
+|[![Image from Gyazo](https://i.gyazo.com/d260100244d228aae79b4586894e14d4.gif)](https://gyazo.com/d260100244d228aae79b4586894e14d4)|支払い機能|
 
 ## 実装予定の機能
 - リアルタイム空き状況の表示
