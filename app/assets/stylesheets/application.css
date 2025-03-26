@@ -1,20 +1,5 @@
 @charset "UTF-8";
 
-
-
-/* Bootstrapの読み込み */
-/* @import "bootstrap"; */
-/* @import "rooms";
-@import "auth";
-@import "reservations";
-@import "payments";
-@import "facilities";
-@import "daytrips"; */
-
-/* // @import "tailwindcss/base";
-// @import "tailwindcss/components";
-// @import "tailwindcss/utilities"; */
-
 /* === 全体リセット === */
 * {
   margin: 0;
@@ -356,7 +341,7 @@ footer p {
 
 
 .welcome-message {
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 40px;
   font-size: 16px;
@@ -374,4 +359,139 @@ footer p {
   left: 160px;
   font-size: 16px;
   text-decoration: underline;
+}
+
+
+
+/* ===============================
+   📱 スマートフォン向け（〜767px）
+   =============================== */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar-brand {
+    font-size: 30px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero span {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .guide-button {
+    font-size: 14px;
+    padding: 10px 24px;
+  }
+
+  .scroll-container h1 {
+    font-size: 30px;
+  }
+
+  .scroll-container h2 {
+    font-size: 20px;
+  }
+
+  .map-description {
+    font-size: 13px;
+    padding: 20px 5px;
+  }
+
+  .room-info p,
+  .room-price p {
+    font-size: 14px;
+  }
+
+  .hotel-name {
+    font-size: 18px;
+  }
+
+  .hotel-address {
+    font-size: 14px;
+  }
+
+  .btn-booking, .btn-tel {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .page-top {
+    font-size: 12px;
+  }
+
+  .back-to-rooms-btn {
+    font-size: 14px;
+    left: 20px;
+    bottom: 20px;
+  }
+}
+
+/* ===============================
+   📟 タブレット向け（768px〜1023px）
+   =============================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navbar {
+    padding: 10px 30px;
+  }
+
+  .navbar-brand {
+    font-size: 40px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero span {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+
+  .guide-button {
+    font-size: 16px;
+    padding: 10px 28px;
+  }
+
+  .scroll-container h1 {
+    font-size: 48px;
+  }
+
+  .scroll-container h2 {
+    font-size: 24px;
+  }
+
+  .map-description {
+    font-size: 14px;
+    padding: 25px 10px;
+  }
+
+  .hotel-name {
+    font-size: 20px;
+  }
+
+  .hotel-address {
+    font-size: 15px;
+  }
+
+  .btn-booking, .btn-tel {
+    font-size: 15px;
+    padding: 8px 16px;
+  }
+
+  .back-to-rooms-btn {
+    font-size: 15px;
+    left: 80px;
+    bottom: 30px;
+  }
 }

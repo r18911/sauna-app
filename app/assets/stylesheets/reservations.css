@@ -143,7 +143,7 @@
 
 .btn-cancel:hover { background-color: #c82333; }
 
-// トップページ/部屋一覧に戻るボタン
+ /* トップページ/部屋一覧に戻るボタン */
 
 .reservation-actions {
   margin-top: 20px;

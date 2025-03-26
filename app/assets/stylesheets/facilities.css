@@ -190,3 +190,121 @@
   line-height: 1.6;
   margin: 20px 0;
 }
+
+
+
+
+/* ===============================
+   📱 スマホ対応（〜767px）
+   =============================== */
+   @media (max-width: 767px) {
+    .facilities-hero h1 {
+      font-size: 36px;
+    }
+  
+    .facilities-hero span {
+      font-size: 22px;
+    }
+  
+    .facilities-hero p {
+      font-size: 16px;
+    }
+  
+    .facilities-navigation {
+      flex-direction: column;
+      gap: 10px;
+      padding: 40px 0;
+    }
+  
+    .facility-link a {
+      font-size: 16px;
+      padding: 5px 20px;
+    }
+  
+    .facilities-text h1 {
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+  
+    .facilities-text p {
+      font-size: 14px;
+      padding: 4px 10px;
+    }
+  
+    .carousel-inner {
+      height: auto !important;
+    }
+  
+    .carousel-item {
+      min-height: auto !important;
+    }
+  
+    .carousel-inner img {
+      width: 100%;
+      height: auto !important;
+      object-fit: contain !important;
+      max-height: 300px;
+    }
+  
+    .facilities-description {
+      font-size: 13px;
+      line-height: 1.5;
+      width: 90%;
+      margin: 15px auto;
+    }
+  }
+  
+  /* ===============================
+     📟 タブレット対応（768〜1023px）
+     =============================== */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .facilities-hero h1 {
+      font-size: 48px;
+    }
+  
+    .facilities-hero span {
+      font-size: 28px;
+    }
+  
+    .facilities-hero p {
+      font-size: 20px;
+    }
+  
+    .facilities-navigation {
+      gap: 30px;
+      padding: 60px 0;
+    }
+  
+    .facility-link a {
+      font-size: 17px;
+      padding: 5px 30px;
+    }
+  
+    .facilities-text h1 {
+      font-size: 34px;
+      letter-spacing: 4px;
+    }
+  
+    .facilities-text p {
+      font-size: 16px;
+      padding: 5px 12px;
+    }
+  
+    .carousel-inner {
+      height: 400px;
+    }
+  
+    .carousel-item {
+      min-height: 400px;
+    }
+  
+    .carousel-inner img {
+      height: 400px;
+    }
+  
+    .facilities-description {
+      font-size: 14px;
+      width: 90%;
+      margin: 20px auto;
+    }
+  }
