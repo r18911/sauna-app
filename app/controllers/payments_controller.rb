@@ -13,7 +13,7 @@ class PaymentsController < ApplicationController
       pay_item
       @payment.save
       flash[:success] = "決済が完了しました！"
-      redirect_to root_path
+      redirect_to reservations_path
     else
       gon.public_key = ENV["PAYJP_PUBLIC_KEY"]
       render 'index', status: :unprocessable_entity
