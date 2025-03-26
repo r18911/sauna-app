@@ -494,15 +494,15 @@
       width: 90% !important;
       box-sizing: border-box;
     }
-  
-    .room-card img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 15px;
-    }
 
     .room-images {
       width: 90%;
+    }
+  
+    .room-img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
     }
   
     .room-info {
@@ -599,18 +599,24 @@
       align-items: center;
       padding: 50px 0 25px !important;
       width: 90%;
+      max-width: 720px;
       box-sizing: border-box;
-    }
-  
-    .room-card img {
-      width: 100%;
-      height: 100%;
     }
 
     .room-images {
-      width: 90%;
-      height: 350px;
-      margin-bottom: 15px;
+      width:100%;
+      max-width: 700px;
+      height: auto;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .room-img img {
+      width: 100%;
+      max-width: 100%;
+      height: 280px;
+      object-fit: cover;
     }
   
     .room-info {
