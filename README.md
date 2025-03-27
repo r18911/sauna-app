@@ -50,7 +50,7 @@ Saunaappは、「もっと気軽にサウナを楽しめたらいいのに」と
 ## 実装した機能についての画像やGIFおよびその説明
 |ページ|説明|
 |---|------------------|
-|[![Image from Gyazo](https://i.gyazo.com/67d4223f5383007d643fc617a9ab43db.gif)](https://gyazo.com/67d4223f5383007d643fc617a9ab43db)|トップページ　　　　　　　　　　　　　　　　　　　　　　|
+|[![Image from Gyazo](https://i.gyazo.com/2d7c477e5281ed5f9bcbac7a45efb051.gif)](https://gyazo.com/2d7c477e5281ed5f9bcbac7a45efb051)|トップページ　　　　　　　　　　　　　　　　　　　　　　|
 |[![Image from Gyazo](https://i.gyazo.com/761760ca14f347abedd4877ffeea1c9a.gif)](https://gyazo.com/761760ca14f347abedd4877ffeea1c9a)[![Image from Gyazo](https://i.gyazo.com/3cb7814063e51dda644d8f4d0518479a.gif)](https://gyazo.com/3cb7814063e51dda644d8f4d0518479a)|ユーザー機能<br>・新規登録<br>・ログイン/ログアウト|
 |[![Image from Gyazo](https://i.gyazo.com/2ff85349656ff8592dd73f045a0e1950.gif)](https://gyazo.com/2ff85349656ff8592dd73f045a0e1950)[![Image from Gyazo](https://i.gyazo.com/5be501aed9ab859666d6afb216772344.gif)](https://gyazo.com/5be501aed9ab859666d6afb216772344)|予約機能<br>・予約登録<br>・予約一覧表示<br>・予約の編集・キャンセル|
 |[![Image from Gyazo](https://i.gyazo.com/d260100244d228aae79b4586894e14d4.gif)](https://gyazo.com/d260100244d228aae79b4586894e14d4)|支払い機能|
