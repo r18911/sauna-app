@@ -51,7 +51,8 @@ Saunaappは、「もっと気軽にサウナを楽しめたらいいのに」と
 |ページ|説明|
 |---|------------------|
 |[![Image from Gyazo](https://i.gyazo.com/2d7c477e5281ed5f9bcbac7a45efb051.gif)](https://gyazo.com/2d7c477e5281ed5f9bcbac7a45efb051)|トップページ　　　　　　　　　　　　　　　　　　　　　　|
-|[![Image from Gyazo](https://i.gyazo.com/0dfa503839992beeb613340ed2f3c889.gif)](https://gyazo.com/0dfa503839992beeb613340ed2f3c889)[![Image from Gyazo](https://i.gyazo.com/89f2005eee53cb27cd074d104b034ac1.gif)](https://gyazo.com/89f2005eee53cb27cd074d104b034ac1)|館内施設紹介<br>日帰り入浴料金案内|
+|[![Image from Gyazo](https://i.gyazo.com/0dfa503839992beeb613340ed2f3c889.gif)](https://gyazo.com/0dfa503839992beeb613340ed2f3c889)|館内施設紹介|
+|[![Image from Gyazo](https://i.gyazo.com/89f2005eee53cb27cd074d104b034ac1.gif)](https://gyazo.com/89f2005eee53cb27cd074d104b034ac1)|日帰り入浴料金案内|
 |[![Image from Gyazo](https://i.gyazo.com/761760ca14f347abedd4877ffeea1c9a.gif)](https://gyazo.com/761760ca14f347abedd4877ffeea1c9a)[![Image from Gyazo](https://i.gyazo.com/3cb7814063e51dda644d8f4d0518479a.gif)](https://gyazo.com/3cb7814063e51dda644d8f4d0518479a)|ユーザー機能<br>・新規登録<br>・ログイン/ログアウト|
 |[![Image from Gyazo](https://i.gyazo.com/2ff85349656ff8592dd73f045a0e1950.gif)](https://gyazo.com/2ff85349656ff8592dd73f045a0e1950)[![Image from Gyazo](https://i.gyazo.com/5be501aed9ab859666d6afb216772344.gif)](https://gyazo.com/5be501aed9ab859666d6afb216772344)|予約機能<br>・予約登録<br>・予約一覧表示<br>・予約の編集・キャンセル|
 |[![Image from Gyazo](https://i.gyazo.com/d260100244d228aae79b4586894e14d4.gif)](https://gyazo.com/d260100244d228aae79b4586894e14d4)|支払い機能|
