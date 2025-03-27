@@ -50,7 +50,7 @@ Saunaappは、「もっと気軽にサウナを楽しめたらいいのに」と
 ## 実装した機能についての画像やGIFおよびその説明
 |ページ|説明|
 |---|------------------|
-|[![Image from Gyazo](https://i.gyazo.com/6ef400ae1459a138426e8c5c1a099b00.gif)](https://gyazo.com/6ef400ae1459a138426e8c5c1a099b00)|トップページ　　　　　　　　　　　　　　　　　　　　　　|
+|[![Image from Gyazo](https://i.gyazo.com/a4606ad83999a89c919d2d48c5fd117a.gif)](https://gyazo.com/a4606ad83999a89c919d2d48c5fd117a)|トップページ　　　　　　　　　　　　　　　　　　　　　　|
 |[![Image from Gyazo](https://i.gyazo.com/0dfa503839992beeb613340ed2f3c889.gif)](https://gyazo.com/0dfa503839992beeb613340ed2f3c889)|館内施設紹介|
 |[![Image from Gyazo](https://i.gyazo.com/89f2005eee53cb27cd074d104b034ac1.gif)](https://gyazo.com/89f2005eee53cb27cd074d104b034ac1)|日帰り入浴料金案内|
 |[![Image from Gyazo](https://i.gyazo.com/761760ca14f347abedd4877ffeea1c9a.gif)](https://gyazo.com/761760ca14f347abedd4877ffeea1c9a)[![Image from Gyazo](https://i.gyazo.com/3cb7814063e51dda644d8f4d0518479a.gif)](https://gyazo.com/3cb7814063e51dda644d8f4d0518479a)|ユーザー機能<br>・新規登録<br>・ログイン/ログアウト|
