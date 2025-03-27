@@ -54,9 +54,9 @@
           <%= link_to "詳細を見る", room_path(room), class: "btn-detail" %>
 
           <!-- 予約ボタン（条件分岐） -->
-          <% if user_signed_in? %>
+          <% if user_signed_in? && !current_user.admin? %>
             <%= link_to "この部屋を予約", new_reservation_path(room_id: room.id), class: "btn-reserve" %>
-          <% else %>
+          <% elsif !user_signed_in? %>
             <%= link_to "この部屋を予約", new_user_session_path, class: "btn-reserve" %>
           <% end %>
         </div>

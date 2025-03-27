@@ -24,7 +24,7 @@
         <% @reservations.each do |reservation| %>
           <tr>
             <% if current_user.admin? %>
-              <td><%= reservation.user.email %></td>
+              <td><%= reservation.user.nickname %></td>
             <% end %>
             <td><%= reservation.room.name %></td>
             <td><%= reservation.start_time.strftime("%m月%d日") %></td>
