@@ -11,7 +11,9 @@ Saunaappは、お客さんがサウナ付きのホテルを予約できるアプ
 
 
 ## テスト用アカウント
-利用者 Email：aaa@aaa.com
+Basic認証アカウント：admin
+<br>Basic認証パスワード：2222
+<br>利用者 Email：aaa@aaa.com
 <br>利用者 Password：aaa111
 <br>管理者 Email：admin@admin.com
 <br>管理者 Password：saunaapp
